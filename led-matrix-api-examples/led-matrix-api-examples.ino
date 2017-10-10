@@ -21,6 +21,8 @@
 // Initializing Matrix
 RGBmatrixPanel matrix(A, B, C, D, CLK, LAT, OE, false);
 
+// Adding iterator value for Anim
+int iterator = 0;
 
 void setup() {
   // Starting the Matrix
@@ -77,4 +79,14 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
+  // Animate the rectangle from earlier
+    // black coloured Line behind clears the LEDS
+  matrix.drawLine(iterator-1, 14, iterator-1, 17, matrix.Color333(0,0,0));
+    // Drawing the Rectangle
+  matrix.fillRect(iterator, 14, 3, 3, matrix.Color333(2,5,7));
+
+  if (iterator > 34) {
+    iterator = 0;
+  }
+  iterator++;
 }
