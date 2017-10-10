@@ -54,16 +54,16 @@ void setup() {
   
     // Draw Rectangle: border rectangle
     // drawRect(x, y, width, height, color);
-  matrix.drawRect(0, 10, 3, 3, matrix.Color333(7,2,7));
+  matrix.drawRect(2, 4, 5, 5, matrix.Color333(7,2,7));
     // Fill Rectangle: filled in rectangle
     // fillRect(x, y, width, height, color);
-  matrix.fillRect(0, 14, 3, 3, matrix.Color333(2,5,7));
+  matrix.fillRect(8, 4, 5, 5, matrix.Color333(2,5,7));
     // Fill Circle: filled in circle
     // fillRect(x, y, radius, color);
-  matrix.fillCircle(5, 14, 3, matrix.Color333(0,5,2));
+  matrix.fillCircle(19, 6, 3, matrix.Color333(0,5,2));
 
   // Type Functions:
-  matrix.setCursor(17, 0);    // start at top middle, with one pixel of spacing
+  matrix.setCursor(4, 21);    // start at top middle, with one pixel of spacing
   matrix.setTextSize(1);     // size 1 == 8 pixels high
   matrix.setTextWrap(false); // Don't wrap at end of line - will do ourselves
 
@@ -86,7 +86,8 @@ void loop() {
   matrix.fillRect(iterator, 14, 3, 3, matrix.Color333(2,5,7));
 
   if (iterator > 34) {
-    iterator = 0;
+    iterator = -3;
   }
   iterator++;
+  delay(10);
 }
